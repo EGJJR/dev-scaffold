@@ -6,7 +6,7 @@ use predicates::str;
 use tempfile::TempDir;
 
 fn bin() -> Command {
-    Command::cargo_bin("goldpath").expect("binary")
+    Command::cargo_bin("dev-scaffold").expect("binary")
 }
 
 fn scaffold(tmp: &TempDir, name: &str, type_name: &str) -> assert_cmd::assert::Assert {

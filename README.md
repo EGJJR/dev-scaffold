@@ -1,27 +1,27 @@
-# Goldpath
+# dev-scaffold
 
-Goldpath is a Rust CLI that scaffolds a new service from a small set of golden-path templates. Each template is meant to be a repository you would actually open a pull request on: pinned dependencies, a non-root container, CI that lints and tests, and secure defaults instead of copy-pasted hello world.
+`dev-scaffold` is a CLI that creates a new service repo from a standard template: FastAPI or Axum API, or a Python worker, with Docker, CI, and secure defaults already in place.
 
 This is not a general template engine, and it is not a security product. It is an opinionated bootstrap so new services start from the same reviewed baseline.
 
-![Goldpath demo](docs/goldpath.gif)
+![dev-scaffold demo](docs/dev-scaffold.gif)
 
 ## Install
 
 ```bash
-git clone https://github.com/EGJJR/goldpath.git
-cd goldpath
+git clone https://github.com/EGJJR/dev-scaffold.git
+cd dev-scaffold
 cargo install --path .
 ```
 
-The global command is `goldpath`. Color and animation run only in an interactive terminal. Set `NO_COLOR=1` to disable color.
+The global command is `dev-scaffold`. Color and animation run only in an interactive terminal. Set `NO_COLOR=1` to disable color.
 
 ## Usage
 
 ```bash
-goldpath list
-goldpath payment-service --type api --dry-run
-goldpath payment-service --type api
+dev-scaffold list
+dev-scaffold payment-service --type api --dry-run
+dev-scaffold payment-service --type api
 ```
 
 Run it from the directory where you keep services, or pass `--output`.

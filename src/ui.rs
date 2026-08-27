@@ -28,12 +28,12 @@ pub fn print_banner() {
     println!(
         "  {}  {}  {}",
         style("◆").cyan().bold(),
-        style("GOLDPATH").white().bold(),
+        style("DEV-SCAFFOLD").white().bold(),
         style(format!("v{version}")).dim()
     );
     println!(
         "     {}",
-        style("golden-path scaffolding · secure defaults").dim()
+        style("scaffold a service · secure defaults").dim()
     );
     println!(
         "  {}",

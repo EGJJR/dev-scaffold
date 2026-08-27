@@ -1,6 +1,6 @@
 use clap::Parser;
-use goldpath::cli::Cli;
-use goldpath::{run, ui};
+use dev_scaffold::cli::Cli;
+use dev_scaffold::{run, ui};
 
 fn main() {
     if let Err(err) = run(Cli::parse()) {

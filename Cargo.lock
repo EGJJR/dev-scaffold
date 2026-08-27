@@ -240,6 +240,23 @@ dependencies = [
 ]
 
 [[package]]
+name = "dev-scaffold"
+version = "0.1.0"
+dependencies = [
+ "assert_cmd",
+ "chrono",
+ "clap",
+ "console",
+ "dialoguer",
+ "indicatif",
+ "minijinja",
+ "predicates",
+ "rust-embed",
+ "tempfile",
+ "thiserror 2.0.20",
+]
+
+[[package]]
 name = "dialoguer"
 version = "0.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -339,23 +356,6 @@ dependencies = [
  "cfg-if",
  "libc",
  "r-efi",
-]
-
-[[package]]
-name = "goldpath"
-version = "0.1.0"
-dependencies = [
- "assert_cmd",
- "chrono",
- "clap",
- "console",
- "dialoguer",
- "indicatif",
- "minijinja",
- "predicates",
- "rust-embed",
- "tempfile",
- "thiserror 2.0.20",
 ]
 
 [[package]]

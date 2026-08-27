@@ -13,8 +13,8 @@ fn clap_styles() -> Styles {
 
 #[derive(Debug, Parser)]
 #[command(
-    name = "goldpath",
-    about = "Scaffold a service from a secure golden-path template",
+    name = "dev-scaffold",
+    about = "Scaffold a production-ready service from a secure template",
     styles = clap_styles(),
     args_conflicts_with_subcommands = true
 )]

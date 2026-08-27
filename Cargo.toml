@@ -1,21 +1,21 @@
 [package]
-name = "goldpath"
+name = "dev-scaffold"
 version = "0.1.0"
 edition = "2021"
-description = "Golden-path CLI that scaffolds services with secure defaults"
+description = "CLI that scaffolds production-ready services with secure defaults"
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/EGJJR/goldpath"
-homepage = "https://github.com/EGJJR/goldpath"
-keywords = ["cli", "scaffold", "devtools", "golden-path"]
+repository = "https://github.com/EGJJR/dev-scaffold"
+homepage = "https://github.com/EGJJR/dev-scaffold"
+keywords = ["cli", "scaffold", "devtools"]
 categories = ["command-line-utilities", "development-tools"]
 
 [lib]
-name = "goldpath"
+name = "dev_scaffold"
 path = "src/lib.rs"
 
 [[bin]]
-name = "goldpath"
+name = "dev-scaffold"
 path = "src/main.rs"
 
 [dependencies]

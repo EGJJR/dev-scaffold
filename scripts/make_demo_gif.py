@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render docs/goldpath.gif from a canned Goldpath dry-run session."""
+"""Render docs/dev-scaffold.gif from a canned dry-run session."""
 
 from pathlib import Path
 
@@ -16,13 +16,13 @@ WHITE = (255, 255, 255)
 CURSOR = (56, 189, 190)
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "docs" / "goldpath.gif"
+OUT = ROOT / "docs" / "dev-scaffold.gif"
 
-COMMAND = "goldpath payment-service --type api --dry-run"
+COMMAND = "dev-scaffold payment-service --type api --dry-run"
 
 OUTPUT = """\
-  ◆  GOLDPATH  v0.1.0
-     golden-path scaffolding · secure defaults
+  ◆  DEV-SCAFFOLD  v0.1.0
+     scaffold a service · secure defaults
   ────────────────────────────────────────
 
   Dry run   payment-service
@@ -60,7 +60,7 @@ def load_font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
 
 def color_for(line: str) -> tuple[int, int, int]:
     stripped = line.lstrip()
-    if "GOLDPATH" in line or stripped.startswith("◆"):
+    if "DEV-SCAFFOLD" in line or stripped.startswith("◆"):
         return CYAN
     if stripped.startswith("──"):
         return CYAN
@@ -74,7 +74,7 @@ def color_for(line: str) -> tuple[int, int, int]:
         if stripped.rstrip().endswith("/"):
             return CYAN
         return FG
-    if stripped.startswith("golden-path"):
+    if stripped.startswith("scaffold a service"):
         return DIM
     return FG
 
