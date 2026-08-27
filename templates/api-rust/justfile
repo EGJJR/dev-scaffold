@@ -1,0 +1,10 @@
+set shell := ["bash", "-cu"]
+
+run:
+	SECRET_KEY="${SECRET_KEY:-dev-only-not-for-production}" ENV="${ENV:-development}" cargo run
+
+test:
+	cargo test
+
+docker:
+	docker build -t {{ project_name }}:local .

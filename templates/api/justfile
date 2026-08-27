@@ -1,0 +1,12 @@
+set shell := ["bash", "-cu"]
+
+run:
+	uv sync --extra dev
+	SECRET_KEY="${SECRET_KEY:-dev-only-not-for-production}" ENV="${ENV:-development}" uv run uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+
+test:
+	uv sync --extra dev
+	SECRET_KEY="${SECRET_KEY:-test-only-not-secret}" ENV=test uv run pytest
+
+docker:
+	docker build -t {{ project_name }}:local .
